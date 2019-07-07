@@ -169,6 +169,7 @@
 <text x="1.905" y="50.8" size="1.4224" layer="21" font="vector" rot="SR270">https://blog.chrisd.info         cjd@chrisd.info</text>
 <text x="60.96" y="36.83" size="1.778" layer="21" rot="R90" align="bottom-right">5V</text>
 <text x="60.96" y="46.99" size="1.778" layer="21" rot="R90">GND</text>
+<text x="5.08" y="20.32" size="1.4224" layer="21" font="vector" rot="SR270">v1.0 2019</text>
 </plain>
 <libraries>
 <library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
