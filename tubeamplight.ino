@@ -87,7 +87,7 @@ void doRipple()
     }
 }
 
-void knightRider()
+void knightRider(bool bgOn)
 {
     static const uint8_t tail[] =  { 255, 128, 64, 32 };
     static int direction = 1;
@@ -109,7 +109,7 @@ void knightRider()
         }
         if (inTail == false)
         {
-            leds[i] = CHSV(160, 255, 255);
+            leds[i] = CHSV(160, 255, bgOn ? 255 : 0);
         }
     }
     headIndex += direction;
@@ -148,7 +148,7 @@ bool doInit()
     }
     else if (cnt < 622)
     {
-        knightRider();
+        knightRider(random16(0, 2) ? true : false);
     }
     else if (cnt < 650)
     {
