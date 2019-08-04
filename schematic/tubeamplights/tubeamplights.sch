@@ -351,14 +351,14 @@ Standard 8.5x11 US Letter frame</description>
 <wire x1="0" y1="28" x2="53" y2="28" width="0.1524" layer="21"/>
 <wire x1="53" y1="28" x2="53" y2="0" width="0.1524" layer="21"/>
 <wire x1="53" y1="0" x2="0" y2="0" width="0.1524" layer="21"/>
-<pad name="AC_L" x="3.4" y="3.2" drill="1.1" diameter="2"/>
-<pad name="AC_N" x="3.4" y="24" drill="1.1" diameter="2"/>
-<pad name="-VDC" x="48.4" y="24" drill="1.1" diameter="2"/>
-<pad name="+VDC" x="48.4" y="16" drill="1.1" diameter="2"/>
-<text x="40.64" y="22.86" size="1.778" layer="21">-VDC</text>
-<text x="40.64" y="15.24" size="1.778" layer="21">+VDC</text>
-<text x="5.08" y="22.86" size="1.778" layer="21">AC_N</text>
-<text x="5.08" y="2.54" size="1.778" layer="21">AC_L</text>
+<pad name="AC_N" x="3.4" y="3.2" drill="1.1" diameter="2"/>
+<pad name="AC_L" x="3.4" y="24" drill="1.1" diameter="2"/>
+<pad name="-VDC" x="48.4" y="3.2" drill="1.1" diameter="2"/>
+<pad name="+VDC" x="48.4" y="11.2" drill="1.1" diameter="2"/>
+<text x="40" y="2" size="1.778" layer="21">-VDC</text>
+<text x="40" y="10" size="1.778" layer="21">+VDC</text>
+<text x="5.08" y="22.86" size="1.778" layer="21">AC_L</text>
+<text x="5.08" y="2.54" size="1.778" layer="21">AC_N</text>
 </package>
 </packages>
 <symbols>
@@ -2093,9 +2093,9 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <part name="U$1" library="ChrisD" deviceset="ARDUINO_PRO_MICRO" device=""/>
 <part name="FRAME1" library="ChrisD" deviceset="FRAME-LETTER" device=""/>
 <part name="U$2" library="meanwell-mpm-20-x" deviceset="MPM-20-X" device=""/>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="JST-PTH-VERT" package3d_urn="urn:adsk.eagle:package:38102/1"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_01" device="PTH_2MM" package3d_urn="urn:adsk.eagle:package:38029/1"/>
 <part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_01" device="PTH_2MM" package3d_urn="urn:adsk.eagle:package:38029/1"/>
+<part name="J4" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_04" device="" package3d_urn="urn:adsk.eagle:package:38085/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -2116,10 +2116,6 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.7432" layer="94" font="vector"/>
 </instance>
 <instance part="U$2" gate="G$1" x="60.96" y="86.36" smashed="yes"/>
-<instance part="J1" gate="G$1" x="88.9" y="58.42" smashed="yes">
-<attribute name="VALUE" x="83.82" y="51.054" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="83.82" y="66.548" size="1.778" layer="95" font="vector"/>
-</instance>
 <instance part="J2" gate="G$1" x="20.32" y="116.84" smashed="yes">
 <attribute name="VALUE" x="17.78" y="112.014" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="17.78" y="119.888" size="1.778" layer="95" font="vector"/>
@@ -2127,6 +2123,10 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <instance part="J3" gate="G$1" x="20.32" y="106.68" smashed="yes">
 <attribute name="VALUE" x="17.78" y="101.854" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="17.78" y="109.728" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="J4" gate="G$1" x="114.3" y="58.42" smashed="yes">
+<attribute name="VALUE" x="109.22" y="51.054" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="109.22" y="66.548" size="1.778" layer="95" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -2145,9 +2145,9 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <label x="43.18" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="55.88" x2="96.52" y2="55.88" width="0.1524" layer="91"/>
-<label x="96.52" y="55.88" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="1"/>
+<wire x1="119.38" y1="55.88" x2="121.92" y2="55.88" width="0.1524" layer="91"/>
+<label x="121.92" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -2169,9 +2169,9 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <label x="2.54" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="4"/>
-<wire x1="93.98" y1="63.5" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
-<label x="96.52" y="63.5" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="4"/>
+<wire x1="119.38" y1="63.5" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
+<label x="121.92" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AC_N" class="0">
@@ -2204,9 +2204,9 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <label x="43.18" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="58.42" x2="96.52" y2="58.42" width="0.1524" layer="91"/>
-<label x="96.52" y="58.42" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="2"/>
+<wire x1="119.38" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
+<label x="121.92" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -2217,9 +2217,9 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <label x="2.54" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="3"/>
-<wire x1="93.98" y1="60.96" x2="96.52" y2="60.96" width="0.1524" layer="91"/>
-<label x="96.52" y="60.96" size="1.778" layer="95"/>
+<pinref part="J4" gate="G$1" pin="3"/>
+<wire x1="119.38" y1="60.96" x2="121.92" y2="60.96" width="0.1524" layer="91"/>
+<label x="121.92" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
